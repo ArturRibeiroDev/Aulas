@@ -7,12 +7,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Compras</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="logo desktop-only">
+  <img src="assets/logo.png" alt="Quicklist logo">
+  <p>quicklist</p>
+</div>
+
+  <header>
+    <a>&larr; Voltar</a>
+    <h1>Compras da semana</h1>
+  </header>
+
+  <main>
+    <form>
+      <div class="content-send">
+        <input type="text" name="add" id="add" placeholder="Adicione um novo item" required />
+        <button type="submit" id="buttonAdd">Adicionar item</button>
+      </div>
+
+      <ul>
+
+        <li class="removed">
+         <div class="checkbox-wrapper">
+           <div class="checkbox-image-removed"></div>
+
+           <p><span class="icon-removed"></span>O item foi removido da lista</p>
+           <button class="Button-Remove"></button>
+         </div>
+      </li>
+
+      </ul>
+
+    </form>
+  </main>
   
 
   <script src="script.js"></script>
