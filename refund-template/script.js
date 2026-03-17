@@ -109,7 +109,6 @@ function updateTotal() {
 
     expensesQuantity.textContent = `${itens.length} ${itens.length > 1 ? "despesas" : "despesa"}`
 
-
     // Variável para incrementar total;
     let total = 0
 
@@ -131,7 +130,7 @@ function updateTotal() {
       total += Number(value)
 
       /* Forma mais fácil de fazer o código acima
-          for (const item of itens) {
+          for (let item of itens) {
 
       const itemAmount = item.querySelector(".expense-amount")
 
@@ -158,6 +157,7 @@ function updateTotal() {
 
     // Adiciona o symbolo da moeda e o valor
     expensesTotal.append(symbolBRL, total)
+    
   } catch (error) {
     console.log(error)
     alert("Não foi possível atualizar os totais.")
@@ -173,6 +173,7 @@ expenseList.addEventListener("click", function (event) {
   updateTotal()
 })
 
+
 function formClear() {
   expense.value = ""
   category.value = ""
@@ -180,3 +181,4 @@ function formClear() {
 
   expense.focus()
 }
+  

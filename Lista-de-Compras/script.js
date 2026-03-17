@@ -77,7 +77,6 @@ function criarItem(content) {
 ul.addEventListener("click", (event) => {
 
   if (event.target.classList.contains("buttonDelete")) {
-
     const li = event.target.closest("li")
 
     li.remove()
